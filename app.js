@@ -1,11 +1,13 @@
 const TMDB_ENDPOINT_BASE = "https://api.themoviedb.org/3";
+const TMDB_IMAGES_500 = "https://image.tmdb.org/t/p/w500";
+const TMDB_IMAGES_1000 = "https://image.tmdb.org/t/p/original";
 
-function mudarCard(data) {
+function EstruturaCard(data) {
   let codigo_html = "";
 
   for (i = 0; i < data.results.length; i++) {
     titulo = data.results[i].title;
-    imagem = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
+    imagem = TMDB_IMAGES_500 + data.results[i].poster_path;
     estreia = data.results[i].release_date;
 
     if (data.results[i].poster_path != null) {
@@ -23,7 +25,7 @@ function mudarCard(data) {
       $("#lista_filmes").html(codigo_html);
     }
   }
-} 
+}
 //exercutar a requisição AJAX
 function MostraFilmesEmCartaz() {
   $.ajax({
@@ -32,8 +34,7 @@ function MostraFilmesEmCartaz() {
     data: {
       api_key: "97fb9e05c6c8ada9e05d5be0994c5389",
     },
-  })
-    .done(mudarCard);
+  }).done(EstruturaCard);
 }
 
 function pesquisaFilmes() {
@@ -46,7 +47,7 @@ function pesquisaFilmes() {
     //Passar a URL ENDPOINT (method: get, default)
     url: TMDB_ENDPOINT_BASE + "/search/movie",
     data: payload,
-  }).done(mudarCard);
+  }).done(EstruturaCard);
 }
 
 $(document).ready(function () {
