@@ -23,8 +23,7 @@ function mudarCard(data) {
       $("#lista_filmes").html(codigo_html);
     }
   }
-}
-
+} 
 //exercutar a requisição AJAX
 function MostraFilmesEmCartaz() {
   $.ajax({
