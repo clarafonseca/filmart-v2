@@ -25,7 +25,7 @@ function EstruturaSlide(data) {
       <h3 class="h1-responsive titulo">${titulo}</h3>
       <p class="descricao">${descricao}</p>
       <button class="btn-info">
-      <a target="_blank" href="pages/movie.html?id=${id}">&plus; Mais informações</a></button>
+      <a target="_blank" href="filmart-v2/pages/movie.html?id=${id}">&plus; Mais informações</a></button>
       </div>
     </div>
   </div> 
