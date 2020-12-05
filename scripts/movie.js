@@ -11,8 +11,8 @@ function EstruturaMovie(data) {
   titulo = data.original_title;
   descricao = data.overview;
   votos = data.vote_average;
-  categoria1 = 'Sem Categoria';
-  categoria2 = 'Sem Categoria';
+  categoria1 = 'Category';
+  categoria2 = 'Category';
 
   if (data.genres[0] != undefined){
     categoria1 = data.genres[0].name;
@@ -23,7 +23,7 @@ function EstruturaMovie(data) {
   document.title = "Filmart - " + titulo;
 
   if (data.status_code < 200 || data.status_code > 300) {
-    $(".filme").html(`<h1 id="msg-alert">Filme Não Encontrado!</h1>`);
+    $(".filme").html(`<h1 id="msg-alert">Movie not found!</h1>`);
     return;
   }
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
   MostraFilme();
   $(".search-box").submit(function (e) {
     let pesquisa = $(".search-text").val();
-    window.location.href = `/pages/search.html?query=${pesquisa}`;
+    window.location.href = `search.html?query=${pesquisa}`;
     e.preventDefault();
   });
 });

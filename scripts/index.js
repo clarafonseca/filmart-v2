@@ -21,7 +21,7 @@ function EstruturaSlide(data) {
   
     <div class="carousel-caption">
     <div class="txt">
-      <h4 class="h4-responsive now">LANÇAMENTOS</h4>
+      <h4 class="h4-responsive now">RELEASED NOW</h4>
       <h3 class="h1-responsive titulo">${titulo}</h3>
       <p class="descricao">${descricao}</p>
       <button class="btn-info">
@@ -154,7 +154,7 @@ $(document).ready(function () {
   });
   $('.search-box').submit(function(e){
     let pesquisa = $('.search-text').val();
-    window.location.href = `/pages/search.html?query=${pesquisa}`;
+    window.location.href = `pages/search.html?query=${pesquisa}`;
     e.preventDefault();
   });
   SlideLancamentos();
