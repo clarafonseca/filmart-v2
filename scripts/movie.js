@@ -70,7 +70,7 @@ $(document).ready(function () {
   MostraFilme();
   $(".search-box").submit(function (e) {
     let pesquisa = $(".search-text").val();
-    window.location.href = `/search.html?query=${pesquisa}`;
+    window.location.href = `filmart-v2/pages/search.html?query=${pesquisa}`;
     e.preventDefault();
   });
 });
