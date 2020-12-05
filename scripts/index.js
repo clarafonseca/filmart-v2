@@ -154,7 +154,7 @@ $(document).ready(function () {
   });
   $('.search-box').submit(function(e){
     let pesquisa = $('.search-text').val();
-    window.location.href = `/search.html?query=${pesquisa}`;
+    window.location.href = `/pages/search.html?query=${pesquisa}`;
     e.preventDefault();
   });
   SlideLancamentos();
