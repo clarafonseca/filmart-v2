@@ -5,7 +5,7 @@ const TMDB_IMAGES_1000 = "https://image.tmdb.org/t/p/original";
 function EstruturaSlide(data) {
   let lancamento_active = "";
   let lancamento = "";
-  for (i = 1; i < 2; i++) {
+  for (i = 0; i < 1; i++) {
     titulo = data.results[i].title;
     imagem = TMDB_IMAGES_1000 + data.results[i].backdrop_path;
     descricao = data.results[i].overview;
@@ -31,7 +31,7 @@ function EstruturaSlide(data) {
   </div> 
     `;
   }
-  for (i = 2; i < 4; i++) {
+  for (i = 1; i < 3; i++) {
     titulo = data.results[i].title;
     imagem = TMDB_IMAGES_1000 + data.results[i].backdrop_path;
     descricao = data.results[i].overview;
@@ -47,7 +47,7 @@ function EstruturaSlide(data) {
   
     <div class="carousel-caption">
     <div class="txt">
-      <h4 class="h4-responsive now">LANÇAMENTOS</h4>
+      <h4 class="h4-responsive now">RELEASED NOW</h4>
       <h3 class="h3-responsive titulo">${titulo}</h3>
       <p class="descricao">${descricao}</p>
       <button class="btn-info">
@@ -154,7 +154,7 @@ $(document).ready(function () {
   });
   $('.search-box').submit(function(e){
     let pesquisa = $('.search-text').val();
-    window.location.href = `pages/search.html?query=${pesquisa}`;
+    window.location.href = `/pages/search.html?query=${pesquisa}`;
     e.preventDefault();
   });
   SlideLancamentos();
