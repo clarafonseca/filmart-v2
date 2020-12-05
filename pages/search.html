@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/search.css">
+    <title>Filmart</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="/index.html">FILMART</a></div>
+      <form class="search-box">
+        <input type="search" class="search-text" placeholder="Pesquisar..." />
+        <button type="submit" class="search-btn">&#9906;</button>
+      </form>
+    </header>
+    <main class="main">
+      <h1 class="pesquisa">Resultados para:</h1>
+      <div id="lista_filmes"></div>
+    </main>  
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/search.js"></script>
+  </body>
+</html>

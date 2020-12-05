@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+/* =================
+     Global styles
+   =================
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+  }
+body{
+    background-color: #1A1919;
+}
+h1,h2,h3,h4,h5,h6,p,li {
+    color: rgba(255, 255, 255, 0.932);
+}
+p {
+    font-weight: 300;
+}
+h3 {
+    font-weight: 600;
+}
+h6 {
+    font-size: 15px;
+}
+/* =================
+        HEADER
+   =================
+*/
+.header {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px 5px 25px;
+  }
+.logo {
+    text-decoration: none;
+    padding-top: 5px;
+}
+.logo a {
+    font-size: 20px;
+    color: #e40000;
+    font-weight: 800;
+    text-decoration: none;
+}
+.search-box {
+    display: flex;
+    border: 1px solid white;
+    padding: 0 8px 0 10px;
+    border-radius: 5px;
+}
+.search-text{
+    color:white;
+}
+.search-text,
+.search-btn{
+    border:none;
+    background: transparent;
+    outline: none;
+}
+.search-text::placeholder
+{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.753);
+}
+.search-btn {
+    color: white;
+    font-size: 1.5rem;
+    -webkit-transform: rotate(315deg); 
+    -moz-transform: rotate(315deg); 
+    -o-transform: rotate(315deg);
+     transform: rotate(315deg);
+}
+@media screen and (max-width: 600px){
+    .header {
+        padding: 5px 15px 5px 8px;
+      }
+    .search-box {
+        display: flex;
+        border: 1px solid white;
+        padding: 0 5px 0 5px;
+        border-radius: 5px;
+    }
+    .search-text{
+        width: 110px;
+    }
+    .search-text::placeholder{
+        font-size: 13px;
+    }
+    .search-btn {
+        font-size: 1.3rem;
+    }
+}
