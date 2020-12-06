@@ -30,7 +30,7 @@ function EstruturaMovie(data) {
   codigo_html += `
         <div class="container">
           <div class="poster-film">
-            <img class="img-original"src="${img_1000} alt="${titulo}">            
+            <img class="img-original"src="${img_1000}" alt="${titulo}">            
             <img class="img-500"src="${img_500}" alt="${titulo}">
             <div class="mask"></div>
           </div>
