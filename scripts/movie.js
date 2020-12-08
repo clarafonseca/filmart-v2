@@ -48,7 +48,7 @@ function EstruturaMovie(data) {
         </div>`;
 
   $(".filme").html(codigo_html);
-  if ( votos > 4 && votos < 7){
+  if ( votos > 4 && votos <= 7){
     $('.votos').css('background-color', '#e6c11f')
   } else  if (votos > 7 && votos <= 10){
     $('.votos').css('background-color', '#20c200')
@@ -57,7 +57,6 @@ function EstruturaMovie(data) {
 
 function MostraFilme() {
   $.ajax({
-    //Passar a URL ENDPOINT (method: get, default)
     url: TMDB_ENDPOINT_BASE + "/movie/" + idFilme,
     data: {
       api_key: "97fb9e05c6c8ada9e05d5be0994c5389",
@@ -65,12 +64,6 @@ function MostraFilme() {
   }).done(EstruturaMovie);
 }
 
-
 $(document).ready(function () {
   MostraFilme();
-  $(".search-box").submit(function (e) {
-    let pesquisa = $(".search-text").val();
-    window.location.href = `search.html?query=${pesquisa}`;
-    e.preventDefault();
-  });
 });
